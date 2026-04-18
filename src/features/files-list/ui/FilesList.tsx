@@ -1,5 +1,6 @@
 'use client';
-import { FileItem, type FileItemType } from '@/src/entities';
+import { FileItem } from '@/src/entities';
+import { FileItemType } from '@/src/shared';
 
 interface FilesListProps {
   files: FileItemType[];
