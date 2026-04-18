@@ -1,16 +1,16 @@
-# search_offline
+# Search Offline
 
-Экспериментальный семантический поиск (RAG) на стороне клиента.
+**Experimental Client-Side RAG (Retrieval-Augmented Generation) Implementation.**
 
-Проект исследует, как запускать нейросети на компьютере пользователя без отправки данных на сервер.
+This project explores the capabilities of modern web browsers to run a full AI pipeline locally, ensuring 100% data privacy and zero server-side dependency.
 
-## Технологический стек и решения
+## Architecture & Tech Stack
 
-- **Next.js & FSD**: Фреймворк приложения с использованием методологии Feature-Sliced Design для обеспечения модульности и масштабируемости кода.
-- **Transformers.js**: Инференс предобученных моделей с Hugging Face на стороне клиента. Реализация NLP-задач (эмбеддинги, семантический анализ) без использования внешних API.
-- **Pdfium (WASM)**: Использование низкоуровневого движка Pdfium для высокопроизводительного парсинга структуры PDF и извлечения текстового контента.
-- **Vector Storage (IndexedDB)**: Организация локального хранилища векторов и метаданных в IndexedDB, что обеспечивает возможность офлайн-работы.
-- **Multithreading (Web Workers)**: Делегирование ресурсоемких операций (токенизация, векторный поиск, парсинг) в фоновые потоки для обеспечения неблокирующего UI и высокой отзывчивости интерфейса.
+- **Next.js & FSD**: Built with Next.js using the **Feature-Sliced Design** methodology.
+- **Transformers.js**: In-browser inference of pre-trained Hugging Face models. NLP tasks (embeddings, semantic analysis) are handled entirely on the client side without external APIs.
+- **Pdfium (WASM)**: Integration of the high-performance, low-level **Pdfium** engine for efficient PDF structure parsing and text extraction.
+- **Vector Storage (IndexedDB)**: Local vector and metadata storage implemented via **IndexedDB**, enabling persistent offline capabilities.
+- **Multithreading (Web Workers)**: Compute-intensive operations (tokenization, vector search, parsing) are delegated to background workers to ensure a non-blocking UI and high interface responsiveness.
 
 ## Getting Started
 
