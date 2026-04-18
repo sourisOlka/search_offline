@@ -1,13 +1,11 @@
 import { init } from '@embedpdf/pdfium';
 import { getTextParts, fixBrokenWords } from './utils';
-import { LOAD_STATUS } from '../../model/types';
+import { FileBufferType, LOAD_STATUS } from '../../model/types';
 import {
   type ChunksBufferType,
-  FileSubDataType,
   PageChunksType,
   PdfsReaderFilesStatus,
 } from './types';
-import { FileBufferType } from '@/src/features';
 
 export class PDFReader {
   pdfium: any = null;
